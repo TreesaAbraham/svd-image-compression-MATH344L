@@ -1,2 +1,2 @@
 # Math344Lab
-image compression?
+image compression with the SVD Project for Math344 Lab
