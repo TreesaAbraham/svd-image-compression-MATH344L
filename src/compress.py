@@ -20,3 +20,9 @@ def rel_error(A, B):
 def predicted_error(s, k):
     """Relative rank-k error computed from the singular values."""
     return np.sqrt(np.sum(s[k:]**2) / np.sum(s**2))
+
+def k_for_error(s, target):
+  "Smallest k whose relative error is at most target"
+  for k in range(1, len(s)+1):
+    if predicted_error(s, k) <= target:
+      return k
